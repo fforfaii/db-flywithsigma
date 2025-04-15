@@ -56,3 +56,14 @@ CALL BookTicket(
 );
 
 SELECT * FROM ticket;
+
+-- CALL Procedures
+CALL MakePayment(
+	'U01253',
+	'T445281',
+	5980.45,
+	'THB',
+	'CreditCard'
+);
+
+SELECT * FROM payment;
