@@ -12,7 +12,7 @@ Database Final Project
 * code for creating & testing stored procedures
 
 # How to named git branch ?
-<yourname>-<yourtask>
+```<yourname>-<yourtask>```
 
 # How to git commit ?
-<yourname>: <description>
+```<yourname>: <description>```
