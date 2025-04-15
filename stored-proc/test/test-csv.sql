@@ -1,3 +1,5 @@
+-- สำหรับทดสอบกับข้อมูล .csv
+
 -- Correct BookTicket
 CALL BookTicket(
 	'A010',

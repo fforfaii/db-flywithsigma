@@ -49,7 +49,7 @@ BEGIN
         VALUES (newTicketID, p_FlightNo, p_SeatNo);
 
         -- Insert Payment record
-        INSERT INTO PAYMENMT (PaymentID, Amount, Currency, PaymentTimeStamp, PaymentMethod, TransactionStatus)
+        INSERT INTO PAYMENT (PaymentID, Amount, Currency, PaymentTimeStamp, PaymentMethod, TransactionStatus)
         VALUES (newPaymentID, p_Price, NULL, NULL, 'Paypal', 'Pending'); -- Currency, PaymentTimeStamp will be update in payment's part
 
         -- Insert Purchase with valid PaymentID
