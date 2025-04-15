@@ -15,4 +15,4 @@ Database Final Project
 ```<yourname>-<yourtask>```
 
 # How to git commit ?
-```<yourname>: <description>```
+```<workname>: <description>```
