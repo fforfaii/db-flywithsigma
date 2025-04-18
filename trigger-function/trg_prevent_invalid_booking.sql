@@ -1,4 +1,4 @@
--- TODO Check this Trigger Work correctly after we got correct init-code
+-- This will Work only if you run Stored Function before running this
 CREATE OR REPLACE FUNCTION trg_prevent_invalid_booking()
 RETURNS TRIGGER
 LANGUAGE plpgsql
@@ -24,7 +24,6 @@ BEFORE INSERT ON TICKET
 FOR EACH ROW
 EXECUTE PROCEDURE trg_prevent_invalid_booking();
 
--- Required to run Stored Function First
 -- For Testing Trigger
 -- SELECT *
 -- FROM flight;
@@ -41,6 +40,9 @@ EXECUTE PROCEDURE trg_prevent_invalid_booking();
 -- Case 1 Flight already depart
 INSERT INTO Flight
 VALUES ('SG102','2022-10-01 10:00:00','BKK','LAO','Suan Air','OSK-141');
+
+-- DELETE FROM TICKET
+-- WHERE ticketid = 'T003';
 
 INSERT INTO TICKET -- This INSERT should should 'ERROR: Flight is already departed'
 VALUES ('T003','Chanatda Konchom','14A','2022-10-01 10:00:00','SG102',90,'Pending',20,20,'B2',NOW()::timestamp(0),'2026-10-01 12:00:00','OSK-141');
