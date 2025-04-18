@@ -16,4 +16,4 @@ $$;
 
 -- Testing Query (Should show All account id with their totalSpent)
 SELECT accountid,cal_total_price(accountid) as totalSpent
-FROM account
+FROM account;
