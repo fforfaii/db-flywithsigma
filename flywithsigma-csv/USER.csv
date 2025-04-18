@@ -1,0 +1,2 @@
+AccountID,CitizenID,PassportNo,Email,VerificationStatus,Country
+A002,1234567890123,P1234567,jane@example.com,TRUE,Thailand

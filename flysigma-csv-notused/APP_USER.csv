@@ -1,0 +1,8 @@
+AccountID,CitizenID,PassportNo,Email,VerificationStatus,Country
+A004,CZ0001,PP00001,user0@email.com,TRUE,Japan
+A005,CZ0002,PP00002,user1@email.com,FALSE,UK
+A006,CZ0003,PP00003,user2@email.com,FALSE,USA
+A007,CZ0004,PP00004,user3@email.com,FALSE,USA
+A008,CZ0005,PP00005,user4@email.com,TRUE,Japan
+A009,CZ0006,PP00006,user5@email.com,FALSE,Japan
+A010,CZ0007,PP00007,user6@email.com,TRUE,Japan
