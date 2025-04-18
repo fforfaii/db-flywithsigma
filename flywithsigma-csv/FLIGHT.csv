@@ -1,2 +1,4 @@
 FlightNo,Schedule,ArrivalAirportID,DepartureAirportID,AirlineName,AircraftRegNo
 FS100,2025-05-01 10:00:00,BKK,BKK,FlySigma,HS-FS001
+AE101,2025-04-20 04:38:46,HND,NKT,AirEurope,YA-AE023
+SM102,2025-03-31 03:45:59,BKK,BKK,StrawberryMorrakod,EW-SM003
