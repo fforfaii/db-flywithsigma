@@ -40,5 +40,4 @@ CALL MakePayment (
 );
 
 SELECT * FROM TICKET;
-
 SELECT * FROM PAYMENT;
