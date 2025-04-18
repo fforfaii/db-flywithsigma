@@ -1,0 +1,2 @@
+TicketID,PassengerName,SeatNo,Schedule,FlightNo,Price,TicketStatus,CheckedBaggage,CabinBaggage,GateTerminal,CreatedAt,ExpiredAt,RegistrationNo
+T001,Jane Smith,12A,2025-05-01 10:00:00,FS100,500.00,Confirmed,1,1,A1,2025-04-01 12:00:00,2025-05-01 09:00:00,HS-FS001
