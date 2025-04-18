@@ -118,7 +118,6 @@ CREATE TABLE TICKET (
     TicketID VARCHAR(10) PRIMARY KEY,
     PassengerName VARCHAR(100) NOT NULL,
     SeatNo VARCHAR(10) NOT NULL,
-    RegNo VARCHAR(20) NOT NULL,
     Schedule TIMESTAMP,
     FlightNo VARCHAR(10) NOT NULL,
     Price DECIMAL(10,2) NOT NULL CHECK (Price >= 0),
@@ -127,7 +126,8 @@ CREATE TABLE TICKET (
     CabinBaggage INT DEFAULT 0 CHECK (CabinBaggage >= 0),
     GateTerminal VARCHAR(10),
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    ExpiredAt TIMESTAMP
+    ExpiredAt TIMESTAMP,
+    RegistrationNo VARCHAR(20) NOT NULL
 );
 
 

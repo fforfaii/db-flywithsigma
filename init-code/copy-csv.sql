@@ -6,29 +6,32 @@
 -- สำหรับไฟล์ ADMIN.csv
 \copy ADMIN(AccountID, IPAddress) FROM '/home/flysigma-csv/ADMIN.csv' DELIMITER ',' CSV HEADER;
 
+-- สำหรับไฟล์ USER.csv (APP_USER)
+\copy APP_USER(AccountID,CitizenID,PassportNo,Email,VerificationStatus,Country) FROM '/home/flysigma-csv/USER.csv' DELIMITER ',' CSV HEADER;
+
 -- สำหรับไฟล์ AIRCRAFT.csv
-\copy AIRCRAFT(RegistrationNo, SeatCapacity, ModelName, CabinClass) FROM '/home/flysigma-csv/AIRCRAFT.csv' DELIMITER ',' CSV HEADER;
+\copy AIRCRAFT(RegistrationNo, AirlineName, SeatCapacity, ModelName) FROM '/home/flysigma-csv/AIRCRAFT.csv' DELIMITER ',' CSV HEADER;
 
 -- สำหรับไฟล์ AIRLINE.csv
-\copy AIRLINE(AirlineName, AirlineCaption, Website, TelNo) FROM '/home/flysigma-csv/AIRLINE.csv' DELIMITER ',' CSV HEADER;
+\copy AIRLINE(AirlineName, AirlineCaption, Website, AmountOfAircraft) FROM '/home/flysigma-csv/AIRLINE.csv' DELIMITER ',' CSV HEADER;
 
 -- สำหรับไฟล์ AIRPORT.csv
 \copy AIRPORT(AirportID, AirportName, City, Country) FROM '/home/flysigma-csv/AIRPORT.csv' DELIMITER ',' CSV HEADER;
 
 -- สำหรับไฟล์ CONNECTED_FLIGHT.csv
-\copy CONNECTED_FLIGHT(FlightNo, TransitCity, TransitTime) FROM '/home/flysigma-csv/CONNECTED_FLIGHT.csv' DELIMITER ',' CSV HEADER;
+\copy CONNECTED_FLIGHT(FlightNo, Schedule) FROM '/home/flysigma-csv/CONNECTED_FLIGHT.csv' DELIMITER ',' CSV HEADER;
 
 -- สำหรับไฟล์ DIRECT_FLIGHT.csv
 \copy DIRECT_FLIGHT(FlightNo,Schedule) FROM '/home/flysigma-csv/DIRECT_FLIGHT.csv' DELIMITER ',' CSV HEADER;
 
 -- สำหรับไฟล์ DOMESTIC.csv
-\copy DOMESTIC_TICKET(TicketID, CitizenID) FROM '/home/flysigma-csv/DOMESTIC.csv' DELIMITER ',' CSV HEADER;
+\copy DOMESTIC_TICKET(TicketID, CitizenID) FROM '/home/flysigma-csv/DOMESTIC_TICKET.csv' DELIMITER ',' CSV HEADER;
 
 -- สำหรับไฟล์ FLIGHT.csv
 \copy FLIGHT(FlightNo,Schedule,ArrivalAirportID,DepartureAirportID,AirlineName,AircraftRegNo) FROM '/home/flysigma-csv/FLIGHT.csv' DELIMITER ',' CSV HEADER;
 
 -- สำหรับไฟล์ INTERNATIONAL.csv
-\copy INTERNATIONAL_TICKET(TicketID, PassportNo) FROM '/home/flysigma-csv/INTERNATIONAL.csv' DELIMITER ',' CSV HEADER;
+\copy INTERNATIONAL_TICKET(TicketID, PassportNo) FROM '/home/flysigma-csv/INTERNATIONAL_TICKET.csv' DELIMITER ',' CSV HEADER;
 
 -- สำหรับไฟล์ PAYMENT.csv
 \copy PAYMENT(PaymentID, Amount, Currency, PaymentTimeStamp, PaymentMethod, TransactionStatus) FROM '/home/flysigma-csv/PAYMENT.csv' DELIMITER ',' CSV HEADER;
@@ -37,10 +40,8 @@
 \copy SEAT(AircraftRegNo, SeatNo, SeatType) FROM '/home/flysigma-csv/SEAT.csv' DELIMITER ',' CSV HEADER;
 
 -- สำหรับไฟล์ TICKET.csv
-\copy TICKET(TicketID,PassengerName,SeatNo,Price,TicketStatus,CheckedBaggage,CabinBaggage,GateTerminal,CreatedAt,ExpiredAt,Schedule,FlightNo,RegistrationNo) FROM '/home/flysigma-csv/TICKET.csv' DELIMITER ',' CSV HEADER;
+\copy TICKET(TicketID,PassengerName,SeatNo,Price,TicketStatus,CheckedBaggage,CabinBaggage,GateTerminal,CreatedAt,ExpiredAt,Schedule,FlightNo,RegistrationNo ) FROM '/home/flysigma-csv/TICKET.csv' DELIMITER ',' CSV HEADER;
 
--- สำหรับไฟล์ USER.csv (APP_USER)
-\copy APP_USER(AccountID,CitizenID,PassportNo,Email,VerificationStatus,Country) FROM '/home/flysigma-csv/USER.csv' DELIMITER ',' CSV HEADER;
 
 -- add copy csv
 -- สำหรับไฟล์ AIRLINE_TEL_NO.csv
