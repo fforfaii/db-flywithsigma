@@ -152,7 +152,7 @@ CREATE TABLE PAYMENT (
     Amount DECIMAL(10,2) CHECK (Amount > 0),
     Currency VARCHAR(10) DEFAULT NULL,
     PaymentTimeStamp TIMESTAMP DEFAULT NULL, -- เวลาที่จ่ายเงิน (if Pending then NULL)
-    PaymentMethod VARCHAR(50),
+    PaymentMethod VARCHAR(50) CHECK (PaymentMethod IN ('Credit/Debit Card','eBanking')),
     TransactionStatus VARCHAR(20) CHECK (TransactionStatus IN ('Success', 'Pending', 'Failed')) DEFAULT 'Pending'
 );
 
