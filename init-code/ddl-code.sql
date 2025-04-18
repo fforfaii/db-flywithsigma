@@ -16,7 +16,6 @@ CREATE TABLE ADMIN (
 -- APP_USER (renamed from USER)
 CREATE TABLE APP_USER (
     AccountID VARCHAR(10) PRIMARY KEY,
-    TelNo VARCHAR(20),
     CitizenID VARCHAR(20) UNIQUE,
     PassportNo VARCHAR(20) UNIQUE,
     Email VARCHAR(100) UNIQUE,
@@ -61,7 +60,7 @@ CREATE TABLE AIRCRAFT (
 -- new table
 CREATE TABLE CABINCLASS (
     RegistrationNo VARCHAR(20) NOT NULL,
-    Class VARCHAR(20),
+    Class VARCHAR(20) CHECK (Class IN ('Economy', 'Business','First Class')),
     CONSTRAINT pk_Cabin PRIMARY KEY (RegistrationNo, Class),
     FOREIGN KEY (RegistrationNo) REFERENCES AIRCRAFT(RegistrationNo) ON DELETE CASCADE
 );
