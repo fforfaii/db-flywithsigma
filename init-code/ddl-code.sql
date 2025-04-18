@@ -70,7 +70,8 @@ CREATE TABLE CABINCLASS (
 CREATE TABLE FLIGHT (
     FlightNo VARCHAR(10),
     Schedule TIMESTAMP,
-    AirportID CHAR(3) NOT NULL,
+    ArrivalAirportID CHAR(3) NOT NULL,
+    DepartureAirportID CHAR(3) NOT NULL,
     AirlineName VARCHAR(100) NOT NULL,
     AircraftRegNo VARCHAR(20) NOT NULL,
     CONSTRAINT pk_Flight PRIMARY KEY (FlightNo, Schedule),
@@ -118,6 +119,9 @@ CREATE TABLE TICKET (
     TicketID VARCHAR(10) PRIMARY KEY,
     PassengerName VARCHAR(100) NOT NULL,
     SeatNo VARCHAR(10) NOT NULL,
+    RegNo VARCHAR(20) NOT NULL,
+    Schedule TIMESTAMP,
+    FlightNo VARCHAR(10) NOT NULL,
     Price DECIMAL(10,2) NOT NULL CHECK (Price >= 0),
     TicketStatus VARCHAR(20) CHECK (TicketStatus IN ('Confirmed', 'Cancelled', 'Pending')) DEFAULT 'Pending',
     CheckedBaggage INT DEFAULT 0 CHECK (CheckedBaggage >= 0),
@@ -197,7 +201,7 @@ CREATE TABLE PURCHASE (
     UserAccountID VARCHAR(10),
     PaymentID VARCHAR(10),
     TicketID VARCHAR(10),
-    PRIMARY KEY (UserAccountID, PaymentID, TicketID),
+    PRIMARY KEY (PaymentID, TicketID),
     FOREIGN KEY (UserAccountID) REFERENCES APP_USER(AccountID),
     FOREIGN KEY (PaymentID) REFERENCES PAYMENT(PaymentID),
     FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID)
