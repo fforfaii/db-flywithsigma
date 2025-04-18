@@ -16,11 +16,11 @@ CREATE TABLE ADMIN (
 -- APP_USER (renamed from USER)
 CREATE TABLE APP_USER (
     AccountID VARCHAR(10) PRIMARY KEY,
-    TelNo VARCHAR(15),
+    TelNo VARCHAR(20),
     CitizenID VARCHAR(20) UNIQUE,
     PassportNo VARCHAR(20) UNIQUE,
     Email VARCHAR(100) UNIQUE,
-    Verified BOOLEAN DEFAULT FALSE,
+    VerificationStatus BOOLEAN DEFAULT FALSE,
     Country VARCHAR(50),
     FOREIGN KEY (AccountID) REFERENCES ACCOUNT(AccountID) ON DELETE CASCADE
 );
@@ -38,53 +38,86 @@ CREATE TABLE AIRLINE (
     AirlineName VARCHAR(100) PRIMARY KEY,
     AirlineCaption VARCHAR(100),
     Website VARCHAR(100),
-    TelNo VARCHAR(20)
+    AmountOfAircraft INT,
+);
+
+-- new table
+CREATE TABLE AIRLINE_TEL_NO (
+    AirlineName VARCHAR(100) PRIMARY KEY,
+    TelNo VARCHAR(20),
+    CONSTRAINT pk_Tel PRIMARY KEY (AirlineName, TelNo),
+    FOREIGN KEY (pk_Tel) REFERENCES AIRLINE(AirlineName) ON DELETE CASCADE
 );
 
 -- AIRCRAFT
 CREATE TABLE AIRCRAFT (
     RegistrationNo VARCHAR(20) PRIMARY KEY,
+    AirlineName VARCHAR(20),
     SeatCapacity INT CHECK (SeatCapacity > 0),
     ModelName VARCHAR(50),
-    CabinClass VARCHAR(100)
+    FOREIGN KEY (AirlineName) REFERENCES AIRLINE(AirlineName) ON DELETE CASCADE
+);
+
+-- new table
+CREATE TABLE CABINCLASS (
+    RegistrationNo VARCHAR(20),
+    Class VARCHAR(20),
+    CONSTRAINT pk_Cabin PRIMARY KEY (RegistrationNo, Class)
+    FOREIGN KEY (pk_Cabin) REFERENCES AIRCRAFT(RegistrationNo) ON DELETE CASCADE
 );
 
 -- FLIGHT
 CREATE TABLE FLIGHT (
-    FlightNo VARCHAR(10) PRIMARY KEY,
-    Schedule TIMESTAMP
+    FlightNo VARCHAR(10),
+    Schedule TIMESTAMP,
+    AirportID CHAR(3),
+    AirlineName VARCHAR(20),
+    AircraftRegNo VARCHAR(20)
+    CONSTRAINT (pk_Flight) PRIMARY KEY (FlightNo, Schedule)
 );
 
 -- CONNECTED_FLIGHT
 CREATE TABLE CONNECTED_FLIGHT (
     FlightNo VARCHAR(10) PRIMARY KEY,
-    TransitCity VARCHAR(50),
+    Schedule TIMESTAMP,
+    CONSTRAINT (pk_Connected_Flight) PRIMARY KEY (FlightNo, Schedule),
+    FOREIGN KEY (pk_Connected_Flight) REFERENCES FLIGHT(pk_Flight) ON DELETE CASCADE
+);
+
+-- new table
+CREATE TABLE CONNECTED_FLIGHT_TRANSIT (
+    FlightNo VARCHAR(10) PRIMARY KEY,
+    Schedule TIMESTAMP,
+    TransitCity VARCHAR(20), 
     TransitTime TIME,
-    FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo) ON DELETE CASCADE
+    CONSTRAINT (pk_Connected_Flight_Transit) PRIMARY KEY (FlightNo, Schedule),
+    FOREIGN KEY (pk_Connected_Flight_Transit) REFERENCES FLIGHT(pk_Flight) ON DELETE CASCADE
 );
 
 -- DIRECT_FLIGHT
 CREATE TABLE DIRECT_FLIGHT (
     FlightNo VARCHAR(10) PRIMARY KEY,
-    FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo) ON DELETE CASCADE
+    Schedule TIMESTAMP,
+    CONSTRAINT (pk_Direct_Flight) PRIMARY KEY (FlightNo, Schedule),
+    FOREIGN KEY (pk_Direct_Flight) REFERENCES FLIGHT(pk_Flight) ON DELETE CASCADE
 );
 
 -- SEAT
 CREATE TABLE SEAT (
-    FlightNo VARCHAR(10),
+    AircraftRegNo VARCHAR(10),
     SeatNo VARCHAR(10),
     SeatType VARCHAR(20),
-    PRIMARY KEY (FlightNo, SeatNo),
-    FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo) ON DELETE CASCADE
+    CONSTRAINT (pk_Seat) PRIMARY KEY (AircraftRegNo, SeatNo),
+    FOREIGN KEY (AircraftRegNo) REFERENCES AIRCRAFT(RegistrationNo) ON DELETE CASCADE
 );
 
--- TICKET
+-- TICKET (เปลี่ยนชื่อจาก status -> TicketStatus)
 CREATE TABLE TICKET (
     TicketID VARCHAR(10) PRIMARY KEY,
     PassengerName VARCHAR(100) NOT NULL,
     SeatNo VARCHAR(10) NOT NULL,
     Price DECIMAL(10,2) NOT NULL CHECK (Price >= 0),
-    Status VARCHAR(20) CHECK (Status IN ('Confirmed', 'Cancelled', 'Pending')) DEFAULT 'Pending',
+    TicketStatus VARCHAR(20) CHECK (Status IN ('Confirmed', 'Cancelled', 'Pending')) DEFAULT 'Pending',
     CheckedBaggage INT DEFAULT 0 CHECK (CheckedBaggage >= 0),
     CabinBaggage INT DEFAULT 0 CHECK (CabinBaggage >= 0),
     GateTerminal VARCHAR(10),
@@ -94,14 +127,14 @@ CREATE TABLE TICKET (
 
 
 -- DOMESTIC
-CREATE TABLE DOMESTIC (
+CREATE TABLE DOMESTIC_TICKET (
     TicketID VARCHAR(10) PRIMARY KEY,
     CitizenID VARCHAR(20),
     FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID) ON DELETE CASCADE
 );
 
 -- INTERNATIONAL
-CREATE TABLE INTERNATIONAL (
+CREATE TABLE INTERNATIONAL_TICKET (
     TicketID VARCHAR(10) PRIMARY KEY,
     PassportNo VARCHAR(20),
     FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID) ON DELETE CASCADE
@@ -117,45 +150,53 @@ CREATE TABLE PAYMENT (
     TransactionStatus VARCHAR(20) CHECK (TransactionStatus IN ('Success', 'Pending', 'Failed')) DEFAULT 'Pending'
 );
 
--- REPORT_TO
+-- REPORT_TO (เปลี่ยนชื่อ status)
 CREATE TABLE REPORT_TO (
-    UserID VARCHAR(10),
-    AdminID VARCHAR(10),
+    UserAccountID VARCHAR(10),
+    AdminAccountID VARCHAR(10),
+    ReportStatus VARCHAR(20) CHECK (Status IN ('Open', 'InProgress', 'Resolved')) DEFAULT 'Open',
+    PRIMARY KEY (UserAccountID, AdminAccountID),
+    FOREIGN KEY (UserAccountID) REFERENCES APP_USER(AccountID) ON DELETE CASCADE,
+    FOREIGN KEY (AdminAccountID) REFERENCES ADMIN(AccountID) ON DELETE CASCADE
+);
+
+-- new table
+CREATE TABLE USER_MESSAGE (
+    UserAccountID VARCHAR(10),
+    AdminAccountID VARCHAR(10),
     Message TEXT,
-    Status VARCHAR(20) CHECK (Status IN ('Open', 'InProgress', 'Resolved')) DEFAULT 'Open',
-    PRIMARY KEY (UserID, AdminID),
-    FOREIGN KEY (UserID) REFERENCES APP_USER(AccountID) ON DELETE CASCADE,
-    FOREIGN KEY (AdminID) REFERENCES ADMIN(AccountID) ON DELETE CASCADE
+    PRIMARY KEY (UserAccountID, AdminAccountID, Message),
+    FOREIGN KEY (UserAccountID) REFERENCES APP_USER(AccountID) ON DELETE CASCADE,
+    FOREIGN KEY (AdminAccountID) REFERENCES ADMIN(AccountID) ON DELETE CASCADE
 );
 
 -- CONTACT
 CREATE TABLE CONTACT (
-    AdminID VARCHAR(10),
+    AdminAccountID VARCHAR(10),
     AirlineName VARCHAR(100),
-    Message TEXT,
-    Status VARCHAR(20) CHECK (Status IN ('Open', 'InProgress', 'Resolved')) DEFAULT 'Open',
-    PRIMARY KEY (AdminID, AirlineName),
-    FOREIGN KEY (AdminID) REFERENCES ADMIN(AccountID) ON DELETE CASCADE,
+    ContactStatus VARCHAR(20) CHECK (Status IN ('Open', 'InProgress', 'Resolved')) DEFAULT 'Open',
+    PRIMARY KEY (AdminAccountID, AirlineName),
+    FOREIGN KEY (AdminAccountID) REFERENCES ADMIN(AccountID) ON DELETE CASCADE,
     FOREIGN KEY (AirlineName) REFERENCES AIRLINE(AirlineName)
 );
 
--- OWN
-CREATE TABLE OWN (
-    AirlineName VARCHAR(100),
-    RegistrationNo VARCHAR(20),
-    Amount INT,
-    PRIMARY KEY (AirlineName, RegistrationNo),
-    FOREIGN KEY (AirlineName) REFERENCES AIRLINE(AirlineName),
-    FOREIGN KEY (RegistrationNo) REFERENCES AIRCRAFT(RegistrationNo)
-);
+-- -- OWN
+-- CREATE TABLE OWN (
+--     AirlineName VARCHAR(100),
+--     RegistrationNo VARCHAR(20),
+--     Amount INT,
+--     PRIMARY KEY (AirlineName, RegistrationNo),
+--     FOREIGN KEY (AirlineName) REFERENCES AIRLINE(AirlineName),
+--     FOREIGN KEY (RegistrationNo) REFERENCES AIRCRAFT(RegistrationNo)
+-- );
 
 -- PURCHASE
 CREATE TABLE PURCHASE (
-    UserID VARCHAR(10),
+    UserAccountID VARCHAR(10),
     PaymentID VARCHAR(10),
     TicketID VARCHAR(10),
-    PRIMARY KEY (UserID, PaymentID, TicketID),
-    FOREIGN KEY (UserID) REFERENCES APP_USER(AccountID),
+    PRIMARY KEY (UserAccountID, PaymentID, TicketID),
+    FOREIGN KEY (UserAccountID) REFERENCES APP_USER(AccountID),
     FOREIGN KEY (PaymentID) REFERENCES PAYMENT(PaymentID),
     FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID)
 );
@@ -169,71 +210,87 @@ CREATE TABLE OPERATE (
     FOREIGN KEY (AirlineName) REFERENCES AIRLINE(AirlineName)
 );
 
--- MANAGE
-CREATE TABLE MANAGE (
-    AirlineName VARCHAR(100),
-    FlightNo VARCHAR(10),
-    PRIMARY KEY (AirlineName, FlightNo),
-    FOREIGN KEY (AirlineName) REFERENCES AIRLINE(AirlineName),
-    FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo)
-);
+-- -- MANAGE
+-- CREATE TABLE MANAGE (
+--     AirlineName VARCHAR(100),
+--     FlightNo VARCHAR(10),
+--     PRIMARY KEY (AirlineName, FlightNo),
+--     FOREIGN KEY (AirlineName) REFERENCES AIRLINE(AirlineName),
+--     FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo)
+-- );
 
--- CONTAIN
-CREATE TABLE CONTAIN (
-    RegistrationNo VARCHAR(20),
-    SeatNo VARCHAR(10),
-    Amount INT,
-    PRIMARY KEY (RegistrationNo, SeatNo),
-    FOREIGN KEY (RegistrationNo) REFERENCES AIRCRAFT(RegistrationNo)
-);
+-- -- CONTAIN
+-- CREATE TABLE CONTAIN (
+--     RegistrationNo VARCHAR(20),
+--     SeatNo VARCHAR(10),
+--     Amount INT,
+--     PRIMARY KEY (RegistrationNo, SeatNo),
+--     FOREIGN KEY (RegistrationNo) REFERENCES AIRCRAFT(RegistrationNo)
+-- );
 
 -- ASSIGNED_TO
 CREATE TABLE ASSIGNED_TO (
-    UserID VARCHAR(10),
+    UserAccountID VARCHAR(10),
     FlightNo VARCHAR(10),
-    PRIMARY KEY (UserID, FlightNo),
-    FOREIGN KEY (UserID) REFERENCES APP_USER(AccountID),
+    Schedule TIMESTAMP,
+    PRIMARY KEY (UserAccountID, FlightNo),
+    FOREIGN KEY (UserAccountID) REFERENCES APP_USER(AccountID),
     FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo)
 );
 
--- DEPART_FROM
-CREATE TABLE DEPART_FROM (
-    FlightNo VARCHAR(10) PRIMARY KEY,
-    AirportID CHAR(3),
-    FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo),
-    FOREIGN KEY (AirportID) REFERENCES AIRPORT(AirportID)
+-- -- DEPART_FROM
+-- CREATE TABLE DEPART_FROM (
+--     FlightNo VARCHAR(10) PRIMARY KEY,
+--     AirportID CHAR(3),
+--     FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo),
+--     FOREIGN KEY (AirportID) REFERENCES AIRPORT(AirportID)
+-- );
+
+-- -- ARRIVE_AT
+-- CREATE TABLE ARRIVE_AT (
+--     FlightNo VARCHAR(10) PRIMARY KEY,
+--     AirportID CHAR(3),
+--     FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo),
+--     FOREIGN KEY (AirportID) REFERENCES AIRPORT(AirportID)
+-- );
+
+-- -- BELONG_TO
+-- CREATE TABLE BELONG_TO (
+--     TicketID VARCHAR(10) PRIMARY KEY,
+--     FlightNo VARCHAR(10),
+--     FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID),
+--     FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo)
+-- );
+
+-- -- OCCUPY
+-- CREATE TABLE OCCUPY (
+--     TicketID VARCHAR(10) PRIMARY KEY,
+--     FlightNo VARCHAR(10),
+--     SeatNo VARCHAR(10),
+--     FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID),
+--     FOREIGN KEY (FlightNo, SeatNo) REFERENCES SEAT(FlightNo, SeatNo)
+-- );
+
+-- -- FEATURE
+-- CREATE TABLE FEATURE (
+--     RegistrationNo VARCHAR(20),
+--     FlightNo VARCHAR(10),
+--     PRIMARY KEY (RegistrationNo, FlightNo),
+--     FOREIGN KEY (RegistrationNo) REFERENCES AIRCRAFT(RegistrationNo),
+--     FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo)
+-- );
+
+CREATE TABLE USER_TEL_NO (
+    AccountID VARCHAR(20) PRIMARY KEY,
+    Tel VARCHAR(20),
+    FOREIGN KEY (AccountID) REFERENCES APP_USER(AccountID),
 );
 
--- ARRIVE_AT
-CREATE TABLE ARRIVE_AT (
-    FlightNo VARCHAR(10) PRIMARY KEY,
-    AirportID CHAR(3),
-    FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo),
-    FOREIGN KEY (AirportID) REFERENCES AIRPORT(AirportID)
-);
-
--- BELONG_TO
-CREATE TABLE BELONG_TO (
-    TicketID VARCHAR(10) PRIMARY KEY,
-    FlightNo VARCHAR(10),
-    FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID),
-    FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo)
-);
-
--- OCCUPY
-CREATE TABLE OCCUPY (
-    TicketID VARCHAR(10) PRIMARY KEY,
-    FlightNo VARCHAR(10),
-    SeatNo VARCHAR(10),
-    FOREIGN KEY (TicketID) REFERENCES TICKET(TicketID),
-    FOREIGN KEY (FlightNo, SeatNo) REFERENCES SEAT(FlightNo, SeatNo)
-);
-
--- FEATURE
-CREATE TABLE FEATURE (
-    RegistrationNo VARCHAR(20),
-    FlightNo VARCHAR(10),
-    PRIMARY KEY (RegistrationNo, FlightNo),
-    FOREIGN KEY (RegistrationNo) REFERENCES AIRCRAFT(RegistrationNo),
-    FOREIGN KEY (FlightNo) REFERENCES FLIGHT(FlightNo)
+CREATE TABLE AIRLINE_MESSAGE (
+    AirlineName VARCHAR(20),
+    AdminAccountID VARCHAR(20),
+    Text TEXT,
+    PRIMARY KEY (AirlineName, AdminAccountID),
+    FOREIGN KEY (AirlineName) REFERENCES AIRLINE_TEL_NO(AirlineName),
+    FOREIGN KEY (AdminAccountID) REFERENCES ADMIN(AccountID)
 );
