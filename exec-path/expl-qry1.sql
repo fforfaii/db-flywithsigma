@@ -2,7 +2,7 @@ EXPLAIN SELECT
   t.TicketID, 
   t.PassengerName, 
   t.SeatNo, 
-  t.Status, 
+  t.TicketStatus, 
   f.FlightNo, 
   f.Schedule 
 FROM TICKET t 
