@@ -1,0 +1,19 @@
+1. Start mongoshell
+>mongosh
+
+2. Create Database: In this case database name is termproject
+>use termproject
+
+3. Create collection with validation schema
+>mongosh termproject flight_schema.js
+>mongosh termproject airline_schema.js
+>mongosh termproject aircraft_schema.js
+>mongosh termproject seat_schema.js
+
+4. Insert data in to database
+>mongoimport --db='termproject' --collection='aircraft' --jsonArray --file=aircraft.json
+>mongoimport --db='termproject' --collection='flight' --jsonArray --file=flight.json
+>mongoimport --db='termproject' --collection='airline' --jsonArray --file=seat.json
+>mongoimport --db='termproject' --collection='seat' --jsonArray --file=seat.json
+
+

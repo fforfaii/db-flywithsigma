@@ -1,0 +1,38 @@
+[
+    {
+      "RegistrationNo": "HS-TQA",
+      "ModelName": "Airbus A320",
+      "SeatCapacity": 180,
+      "CabinClass": ["ECONOMY"],
+      "SeatAmount": 180
+    },
+    {
+      "RegistrationNo": "N7890Q",
+      "ModelName": "Boeing 737-800",
+      "SeatCapacity": 160,
+      "CabinClass": ["ECONOMY", "BUSINESS"],
+      "SeatAmount": 160
+    },
+    {
+      "RegistrationNo": "G-EZTH",
+      "ModelName": "Airbus A319",
+      "SeatCapacity": 144,
+      "CabinClass": ["ECONOMY"],
+      "SeatAmount": 144
+    },
+    {
+      "RegistrationNo": "F-GSPL",
+      "ModelName": "Boeing 777-300ER",
+      "SeatCapacity": 350,
+      "CabinClass": ["ECONOMY", "BUSINESS", "FIRSTCLASS"],
+      "SeatAmount": 350
+    },
+    {
+      "RegistrationNo": "JA123A",
+      "ModelName": "Mitsubishi SpaceJet",
+      "SeatCapacity": 76,
+      "CabinClass": ["ECONOMY"],
+      "SeatAmount": 76
+    }
+  ]
+  
