@@ -13,6 +13,7 @@ DECLARE
     expectedAmount DECIMAL(10,2);
     currentStatus VARCHAR(20);
 BEGIN
+
     -- อัปเดตข้อมูลใน PAYMENT
     UPDATE PAYMENT
     SET

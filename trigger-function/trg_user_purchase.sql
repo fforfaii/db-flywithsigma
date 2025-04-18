@@ -17,15 +17,6 @@ BEGIN
         RAISE EXCEPTION 'User is not verified';
     END IF;
 
-    -- Check does payment record exist
-    SELECT PaymentID INTO existingPaymentID
-    FROM PURCHASE
-    WHERE ticketid = NEW.ticketid AND PaymentID = NEW.paymentid;
-
-    IF existingPaymentID IS NULL THEN
-        RAISE EXCEPTION 'Payment record not found for this User and Ticket.';
-    END IF;
-
     -- Check that if payment already paid
     SELECT TransactionStatus INTO currentStatus
     FROM PAYMENT
