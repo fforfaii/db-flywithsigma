@@ -2,7 +2,6 @@ SELECT
   t.TicketID, 
   t.PassengerName, 
   t.SeatNo, 
-  t.TicketStatus, 
   f.FlightNo, 
   f.Schedule,
   al.AirlineName,
