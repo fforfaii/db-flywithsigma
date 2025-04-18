@@ -24,6 +24,7 @@ BEFORE INSERT ON TICKET
 FOR EACH ROW
 EXECUTE PROCEDURE trg_prevent_invalid_booking();
 
+-- Required to run Stored Function First
 -- For Testing Trigger
 -- SELECT *
 -- FROM flight;
