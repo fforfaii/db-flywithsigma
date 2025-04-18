@@ -5,11 +5,16 @@ CREATE OR REPLACE PROCEDURE BookTicket (
     IN p_UserID VARCHAR(10),
     IN p_FlightNo VARCHAR(10),
     IN p_SeatNo VARCHAR(10),
+    IN p_Schedule TIMESTAMP,
+    IN p_FlightNo VARCHAR(10),
     IN p_PassengerName VARCHAR(100),
     IN p_CheckedBaggage INT,
     IN p_CabinBaggage INT,
     IN p_GateTerminal VARCHAR(10),
-    IN p_Price DECIMAL(10,2)
+    IN p_Price DECIMAL(10,2),
+    IN p_RegistrationNo VARCHAR(20),
+    IN p_Currency VARCHAR(10),
+    IN p_PaymentMethod VARCHAR(50)
 )
 LANGUAGE plpgsql
 AS $$
@@ -40,23 +45,17 @@ BEGIN
     BEGIN
         -- Start transaction block
         INSERT INTO TICKET (
-            TicketID, PassengerName, SeatNo, Price, CheckedBaggage, CabinBaggage, GateTerminal, ExpiredAt
+            TicketID, PassengerName, SeatNo, Schedule, FlightNo, Price, CheckedBaggage, CabinBaggage, GateTerminal, ExpiredAt, RegistrationNo
         ) VALUES (
-            newTicketID, p_PassengerName, p_SeatNo, p_Price, p_CheckedBaggage, p_CabinBaggage, p_GateTerminal, expTime
+            newTicketID, p_PassengerName, p_SeatNo, p_Schedule, p_FlightNo, p_Price, p_CheckedBaggage, p_CabinBaggage, p_GateTerminal, expTime, p_RegistrationNo
         );
-
-        INSERT INTO BELONG_TO (TicketID, FlightNo)
-        VALUES (newTicketID, p_FlightNo);
-
-        INSERT INTO OCCUPY (TicketID, FlightNo, SeatNo)
-        VALUES (newTicketID, p_FlightNo, p_SeatNo);
 
         -- Insert Payment record
         INSERT INTO PAYMENT (PaymentID, Amount, Currency, PaymentTimeStamp, PaymentMethod, TransactionStatus)
-        VALUES (newPaymentID, p_Price, NULL, NULL, 'Paypal', 'Pending'); -- Currency, PaymentTimeStamp will be update in payment's part
+        VALUES (newPaymentID, p_Price, p_Currency, NULL, p_PaymentMethod, 'Pending'); -- Currency, PaymentTimeStamp will be update in payment's part
 
         -- Insert Purchase with valid PaymentID
-        INSERT INTO PURCHASE (UserID, PaymentID, TicketID)
+        INSERT INTO PURCHASE (UserAccountID, PaymentID, TicketID)
         VALUES (p_UserID, newPaymentID, newTicketID);
         
     EXCEPTION

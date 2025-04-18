@@ -4,7 +4,9 @@ EXPLAIN SELECT
   t.SeatNo, 
   t.TicketStatus, 
   f.FlightNo, 
-  f.Schedule 
-FROM TICKET t 
-LEFT JOIN SEAT s ON t.SeatNo = s.SeatNo 
-LEFT JOIN FLIGHT f ON s.FlightNo = f.FlightNo;
+  f.Schedule,
+  al.AirlineName,
+  al.AirlineCaption
+FROM TICKET t
+LEFT JOIN FLIGHT f ON t.FlightNo = f.FlightNo AND t.Schedule = f.Schedule
+LEFT JOIN AIRLINE al ON al.AirlineName = f.AirlineName;
