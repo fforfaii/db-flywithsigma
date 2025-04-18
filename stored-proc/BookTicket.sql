@@ -1,3 +1,6 @@
+-- If Ticket exist then add ticket into domestic or international 
+
+
 CREATE OR REPLACE PROCEDURE BookTicket (
     IN p_UserID VARCHAR(10),
     IN p_FlightNo VARCHAR(10),
