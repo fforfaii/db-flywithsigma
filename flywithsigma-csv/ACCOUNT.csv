@@ -1,3 +1,5 @@
 AccountID,AccountPassword,FirstName,LastName
 A001,pass123,John,Doe
 A002,secure456,Jane,Smith
+A003,admin123,anna,admin
+A004,admin456,apple,admin
