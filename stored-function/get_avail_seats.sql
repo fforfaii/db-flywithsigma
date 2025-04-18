@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION fn_get_available_seats(flightNo VARCHAR(20), schedule TIMESTAMP) -- TODO Update DataType with Parm
+CREATE OR REPLACE FUNCTION get_avail_seats(flightNo VARCHAR, schedule TIMESTAMP) -- TODO Update DataType with Parm
 RETURNS INT
 LANGUAGE plpgsql
 AS $$
