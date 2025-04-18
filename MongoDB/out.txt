@@ -1,0 +1,1083 @@
+[
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "01A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "01B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "01C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "01D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "01E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "01F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "02A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "02B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "02C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "02D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "02E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "02F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "03A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "03B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "03C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "03D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "03E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "03F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "04A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "04B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "04C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "04D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "04E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "04F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "05A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "05B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "05C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "05D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "05E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "05F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "06A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "06B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "06C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "06D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "06E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "06F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "07A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "07B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "07C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "07D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "07E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "07F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "08A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "08B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "08C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "08D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "08E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "08F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "09A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "09B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "09C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "09D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "09E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "09F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "10A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "10B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "10C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "10D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "10E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "10F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "11A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "11B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "11C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "11D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "11E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "11F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "12A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "12B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "12C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "12D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "12E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "12F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "13A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "13B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "13C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "13D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "13E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "13F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "14A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "14B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "14C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "14D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "14E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "14F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "15A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "15B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "15C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "15D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "15E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "15F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "16A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "16B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "16C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "16D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "16E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "16F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "17A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "17B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "17C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "17D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "17E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "17F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "18A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "18B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "18C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "18D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "18E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "18F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "19A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "19B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "19C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "19D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "19E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "19F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "20A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "20B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "20C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "20D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "20E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "20F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "21A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "21B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "21C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "21D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "21E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "21F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "22A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "22B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "22C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "22D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "22E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "22F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "23A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "23B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "23C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "23D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "23E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "23F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "24A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "24B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "24C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "24D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "24E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "24F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "25A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "25B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "25C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "25D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "25E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "25F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "26A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "26B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "26C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "26D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "26E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "26F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "27A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "27B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "27C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "27D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "27E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "27F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "28A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "28B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "28C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "28D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "28E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "28F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "29A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "29B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "29C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "29D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "29E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "29F"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "30A"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "30B"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "30C"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "30D"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "30E"
+
+	},
+	{
+		"AircraftId": { "$oid": "68026edd79860dde25e66f2f" },
+		"SeatType": "ECONOMY",
+		"SeatNo": "30F"
+
+	},
+
+]
