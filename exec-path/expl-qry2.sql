@@ -24,4 +24,4 @@ UNION ALL
 FROM TICKET t
 LEFT JOIN FLIGHT f ON t.FlightNo = f.FlightNo AND t.Schedule = f.Schedule
 LEFT JOIN AIRLINE al ON al.AirlineName = f.AirlineName
-WHERE f.FlightNo = 'AE101');
+WHERE f.FlightNo = 'FJ200');

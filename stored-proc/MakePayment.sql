@@ -14,6 +14,15 @@ DECLARE
     currentStatus VARCHAR(20);
 BEGIN
 
+    SELECT PaymentID INTO existingPaymentID
+    FROM PURCHASE
+    WHERE TicketID = p_TicketID AND UserAccountID = p_UserID;
+
+    -- ตรวจสอบว่ามีหรือไม่
+    IF existingPaymentID IS NULL THEN
+        RAISE EXCEPTION 'No payment record found for TicketID % and UserID %', p_TicketID, p_UserID;
+    END IF;
+
     -- อัปเดตข้อมูลใน PAYMENT
     UPDATE PAYMENT
     SET
@@ -26,7 +35,7 @@ BEGIN
 
     -- อัปเดตสถานะตั๋ว
     UPDATE TICKET
-    SET Status = 'Confirmed'
+    SET TicketStatus = 'Confirmed'
     WHERE TicketID = p_TicketID;
 END;
 $$;

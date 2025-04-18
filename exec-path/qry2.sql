@@ -2,22 +2,26 @@
   t.TicketID, 
   t.PassengerName, 
   t.SeatNo, 
-  t.Status, 
+  t.TicketStatus, 
   f.FlightNo, 
-  f.Schedule 
-FROM TICKET t 
-JOIN SEAT s ON t.SeatNo = s.SeatNo 
-JOIN FLIGHT f ON s.FlightNo = f.FlightNo
-WHERE f.FlightNo = 'F101')
-UNION
+  f.Schedule,
+  al.AirlineName,
+  al.AirlineCaption
+FROM TICKET t
+LEFT JOIN FLIGHT f ON t.FlightNo = f.FlightNo AND t.Schedule = f.Schedule
+LEFT JOIN AIRLINE al ON al.AirlineName = f.AirlineName
+WHERE f.FlightNo = 'FS100')
+UNION ALL
 (SELECT 
   t.TicketID, 
   t.PassengerName, 
   t.SeatNo, 
-  t.Status, 
+  t.TicketStatus, 
   f.FlightNo, 
-  f.Schedule 
-FROM TICKET t 
-JOIN SEAT s ON t.SeatNo = s.SeatNo 
-JOIN FLIGHT f ON s.FlightNo = f.FlightNo
-WHERE f.FlightNo = 'F102');
+  f.Schedule,
+  al.AirlineName,
+  al.AirlineCaption
+FROM TICKET t
+LEFT JOIN FLIGHT f ON t.FlightNo = f.FlightNo AND t.Schedule = f.Schedule
+LEFT JOIN AIRLINE al ON al.AirlineName = f.AirlineName
+WHERE f.FlightNo = 'FJ200');
