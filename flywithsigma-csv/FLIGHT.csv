@@ -1,2 +1,3 @@
 FlightNo,Schedule,ArrivalAirportID,DepartureAirportID,AirlineName,AircraftRegNo
-FS100,2025-05-01 10:00:00,BKK,BKK,FlySigma,HS-FS001
+FS100,2025-05-01 10:00:00,BKK,DMK,FlySigma,HS-FS001
+FJ200,2025-06-01 11:00:00,BKK,HND,FlyJapan,JA123
