@@ -1,0 +1,13 @@
+-- Clone the FLIGHT table without indexes
+CREATE TABLE FLIGHT_NO_INDEX AS SELECT * FROM FLIGHT;
+
+-- with index
+EXPLAIN ANALYZE
+SELECT * FROM FLIGHT
+WHERE FlightNo = 'TG102';
+
+-- -- without index
+-- EXPLAIN ANALYZE
+-- SELECT * FROM FLIGHT_NO_INDEX
+-- WHERE FlightNo = 'TG102';
+
