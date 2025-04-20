@@ -7,8 +7,8 @@ BEGIN
     SELECT SUM(p.Amount) INTO total_spent
     FROM PAYMENT p
     NATURAL JOIN PURCHASE pu
-    WHERE p.TransactionStatus = 'Success'  -- TODO Need to Update with Parm and Fei version
-    AND pu.UserAccountID = func_userAccountID; -- TODO need to check column(attribute) name of pu.userid
+    WHERE p.TransactionStatus = 'Success'  
+    AND pu.UserAccountID = func_userAccountID;
 
     RETURN COALESCE(total_spent, 0);
 END;

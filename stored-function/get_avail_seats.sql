@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION get_avail_seats(func_flightNo VARCHAR, func_Schedule TIMESTAMP) -- TODO Update DataType with Parm
+CREATE OR REPLACE FUNCTION get_avail_seats(func_flightNo VARCHAR, func_Schedule TIMESTAMP)
 RETURNS INT
 LANGUAGE plpgsql
 AS $$
@@ -8,8 +8,8 @@ BEGIN
     SELECT SeatCapacity
     INTO total_seats
     FROM AIRCRAFT A
-    JOIN FLIGHT F ON A.RegistrationNo = F.AircraftRegNo -- TODO Update With Parm
-    WHERE F.FlightNo = func_flightNo AND F.Schedule = func_Schedule; -- TODO Update With Parm
+    JOIN FLIGHT F ON A.RegistrationNo = F.AircraftRegNo
+    WHERE F.FlightNo = func_flightNo AND F.Schedule = func_Schedule; 
 
     SELECT COUNT(*)
     INTO booked_seats
