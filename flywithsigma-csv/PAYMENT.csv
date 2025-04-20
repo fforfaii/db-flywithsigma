@@ -1,3 +1,3 @@
 PaymentID,Amount,Currency,PaymentTimeStamp,PaymentMethod,TransactionStatus
-P001,500.00,THB,2025-04-01 12:05:00,Credit Card,Success
-P002,2500.00,THB,2025-04-01 13:00:00,Credit Card,Pending
+P001,500.00,THB,2025-04-01 12:05:00,Credit/Debit Card,Success
+P002,2500.00,THB,2025-04-01 13:00:00,eBanking,Pending

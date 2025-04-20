@@ -1,0 +1,82 @@
+[
+    {
+      "FlightNo": "QR101",
+      "Schedule": { "$date": "2025-05-01T10:30:00Z" },
+      "Type": "DIRECT",
+      "AircraftId": { "$oid": "680277f304176ac726fb4916" },
+      "AirlineId": { "$oid": "6802795e233157d545aab7a7" }
+    },
+    {
+      "FlightNo": "QR202",
+      "Schedule": { "$date": "2025-05-03T14:45:00Z" },
+      "Type": "CONNECTED",
+      "AircraftId": { "$oid": "680277f304176ac726fb4918" },
+      "AirlineId": { "$oid": "6802795e233157d545aab7a7" },
+      "Transit": {
+        "City": "Doha",
+        "Time": { "$date": "2025-05-03T17:00:00Z" }
+      }
+    },
+    {
+      "FlightNo": "QR303",
+      "Schedule": { "$date": "2025-05-05T06:15:00Z" },
+      "Type": "DIRECT",
+      "AircraftId": { "$oid": "680277f304176ac726fb4919" },
+      "AirlineId": { "$oid": "6802795e233157d545aab7a7" }
+    },
+    {
+      "FlightNo": "QR404",
+      "Schedule": { "$date": "2025-05-07T09:00:00Z" },
+      "Type": "CONNECTED",
+      "AircraftId": { "$oid": "680277f304176ac726fb4916" },
+      "AirlineId": { "$oid": "6802795e233157d545aab7a7" },
+      "Transit": {
+        "City": "Bangkok",
+        "Time": { "$date": "2025-05-07T11:30:00Z" }
+      }
+    },
+    {
+      "FlightNo": "QR505",
+      "Schedule": { "$date": "2025-05-09T13:15:00Z" },
+      "Type": "DIRECT",
+      "AircraftId": { "$oid": "680277f304176ac726fb4918" },
+      "AirlineId": { "$oid": "6802795e233157d545aab7a7" }
+    },
+    {
+      "FlightNo": "EK606",
+      "Schedule": { "$date": "2025-05-02T08:00:00Z" },
+      "Type": "CONNECTED",
+      "AircraftId": { "$oid": "680277f304176ac726fb4915" },
+      "AirlineId": { "$oid": "6802795e233157d545aab7a6" },
+      "Transit": {
+        "City": "Dubai",
+        "Time": { "$date": "2025-05-02T11:20:00Z" }
+      }
+    },
+    {
+      "FlightNo": "EK707",
+      "Schedule": { "$date": "2025-05-06T13:00:00Z" },
+      "Type": "DIRECT",
+      "AircraftId": { "$oid": "680277f304176ac726fb4917" },
+      "AirlineId": { "$oid": "6802795e233157d545aab7a6" }
+    },
+    {
+      "FlightNo": "EK808",
+      "Schedule": { "$date": "2025-05-08T07:50:00Z" },
+      "Type": "CONNECTED",
+      "AircraftId": { "$oid": "680277f304176ac726fb4915" },
+      "AirlineId": { "$oid": "6802795e233157d545aab7a6" },
+      "Transit": {
+        "City": "Abu Dhabi",
+        "Time": { "$date": "2025-05-08T10:15:00Z" }
+      }
+    },
+    {
+      "FlightNo": "EK909",
+      "Schedule": { "$date": "2025-05-10T16:25:00Z" },
+      "Type": "DIRECT",
+      "AircraftId": { "$oid": "680277f304176ac726fb4917" },
+      "AirlineId": { "$oid": "6802795e233157d545aab7a6" }
+    }
+  ]
+  

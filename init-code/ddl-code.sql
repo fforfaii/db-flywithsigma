@@ -150,9 +150,9 @@ CREATE TABLE INTERNATIONAL_TICKET (
 CREATE TABLE PAYMENT (
     PaymentID VARCHAR(10) PRIMARY KEY,
     Amount DECIMAL(10,2) CHECK (Amount > 0),
-    Currency VARCHAR(10) DEFAULT NULL,
+    Currency VARCHAR(10) CHECK (Currency IN ('USD', 'EUR', 'JPY', 'GBP', 'THB', 'CNY', 'AUD', 'CAD')) DEFAULT NULL,
     PaymentTimeStamp TIMESTAMP DEFAULT NULL, -- เวลาที่จ่ายเงิน (if Pending then NULL)
-    PaymentMethod VARCHAR(50),
+    PaymentMethod VARCHAR(50) CHECK (PaymentMethod IN ('Credit/Debit Card','eBanking','PayPal')),
     TransactionStatus VARCHAR(20) CHECK (TransactionStatus IN ('Success', 'Pending', 'Failed')) DEFAULT 'Pending'
 );
 

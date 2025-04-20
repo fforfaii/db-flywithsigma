@@ -1,24 +1,25 @@
-EXPLAIN
-(SELECT 
+EXPLAIN (SELECT 
   t.TicketID, 
   t.PassengerName, 
   t.SeatNo, 
-  t.TicketStatus, 
   f.FlightNo, 
-  f.Schedule 
-FROM TICKET t 
-JOIN SEAT s ON t.SeatNo = s.SeatNo 
-JOIN FLIGHT f ON s.FlightNo = f.FlightNo
+  f.Schedule,
+  al.AirlineName,
+  al.AirlineCaption
+FROM TICKET t
+LEFT JOIN FLIGHT f ON t.FlightNo = f.FlightNo AND t.Schedule = f.Schedule
+LEFT JOIN AIRLINE al ON al.AirlineName = f.AirlineName
 WHERE f.FlightNo = 'FS100')
-UNION
+UNION ALL
 (SELECT 
   t.TicketID, 
   t.PassengerName, 
   t.SeatNo, 
-  t.TicketStatus, 
   f.FlightNo, 
-  f.Schedule 
-FROM TICKET t 
-JOIN SEAT s ON t.SeatNo = s.SeatNo 
-JOIN FLIGHT f ON s.FlightNo = f.FlightNo
-WHERE f.FlightNo = 'SK102');
+  f.Schedule,
+  al.AirlineName,
+  al.AirlineCaption
+FROM TICKET t
+LEFT JOIN FLIGHT f ON t.FlightNo = f.FlightNo AND t.Schedule = f.Schedule
+LEFT JOIN AIRLINE al ON al.AirlineName = f.AirlineName
+WHERE f.FlightNo = 'FJ200');

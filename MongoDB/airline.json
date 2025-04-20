@@ -1,0 +1,30 @@
+[
+    {
+        "AirlineName": "Qatar Airways",
+        "AirlineCaption": "Going Places Together",
+        "Website": "https://www.qatarairways.com/en-th/homepage.html",
+        "TelNo": [
+            "+974 4144 5555"
+        ],
+        
+        "Aircrafts": [
+            { "$oid": "680277f304176ac726fb4916" },
+            { "$oid": "680277f304176ac726fb4918" },
+            { "$oid": "680277f304176ac726fb4919" }
+        ]
+    },
+    {
+        "AirlineName": "Fly Emirates",
+        "AirlineCaption": "Fly Better",
+        "Website": "https://www.emirates.com/",
+        "TelNo": [
+            "+6627873387",
+            "+6626641040"
+        ],
+        
+        "Aircrafts": [
+            { "$oid": "680277f304176ac726fb4915" },
+            { "$oid": "680277f304176ac726fb4917" }
+        ]
+    }
+]
