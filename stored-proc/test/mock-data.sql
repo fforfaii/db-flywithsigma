@@ -33,7 +33,7 @@ SELECT * FROM TICKET;
 
 CALL MakePayment (
     'A005',
-    'T927531',
+    '', -- Insert new value from TICKET (T??????) where you can see from Query SELECT * FROM TICKET;
     7800.89,
     'THB',
     'PayPal'
