@@ -12,7 +12,7 @@ ON FLIGHT(ArrivalAirportID);
 
 
 CREATE INDEX idx_departure_airport_id
-ON AIRPORT(DepartureAirportID); 
+ON FLIGHT(DepartureAirportID); 
 
 
 CREATE INDEX idx_airport_city_country
