@@ -1,6 +1,5 @@
 # db-flywithsigma
-Database Final Project (2110322)
-Chualalongkorn University
+**Database Final Project** (2110322)
 
 ## Members
 1. Mr. Khanapong  Kamchoom (Mark)
